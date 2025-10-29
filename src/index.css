@@ -62,12 +62,12 @@
 
 @layer base {
     :root {
-        --background: 345 100% 91.6%;
+        --background: 345 100% 95%;
         --foreground: 309 41% 31.2%;
         --primary: 287 43.1% 15.2%;
         --primary-foreground: 210 40% 98%;
         --border: 214 32% 91%;
-        --card: 344 68% 85.8%;
+        --card: 313 55% 89%;
     }
 
     .dark {
@@ -76,7 +76,7 @@
         --primary: 325 43.1% 64.6%;
         --primary-foreground: 213 31% 91%;
         --border: 217 33% 20%;
-        --card: 309 41% 13.6%;
+        --card: 223 27.3% 14.9%;
     }
 
     * {

@@ -65,15 +65,11 @@ export const SkillsSection = () => {
                                         <h3 className="font-semibold text-lg">{skill.name}</h3>
                                     </div>
 
-                                    <Progress.Root className="w-full bg-secondary h-2 rounded-full overflow-hidden" value={skill.level}>
+                                    <Progress.Root className="w-full bg-primary/25 h-2 rounded-full overflow-hidden" value={skill.level}>
                                         <Progress.Indicator className ="bg-primary/85 h-2 rounded-full animate-[grow_1.5s_ease-out]"
                                                             style={{transform: `translateX(-${100 - skill.level * progress}%)`}}
                                         />
                                     </Progress.Root>
-
-                                    <div className="text-right mt-1">
-                                        <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                                    </div>
                                 </div>
                             ))}
                         </div>

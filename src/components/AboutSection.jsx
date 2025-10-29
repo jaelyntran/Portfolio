@@ -14,7 +14,7 @@ export const AboutSection = () => {
                             <p className="text-muted-foreground">
                                 Born and raised in Ho Chi Minh City, Vietnam, I now call Los Angeles home.
                                 After earning my associate degree in Computer Science from Orange Coast College,
-                                I transferred to the University of California, Irvine, where I completed my
+                                I transferred to University of California, Irvine, where I completed my
                                 bachelor degree in the same field.
                             </p>
                             <p className="text-muted-foreground">
