@@ -52,7 +52,7 @@ const projects = [
         title: "Search Engine",
         description: "A search engine implementing an inverted index and TF-IDF ranking algorithm for efficient text retrieval.",
         image: "/projects/SearchEngine.jpg",
-        tags: ["Python", "Beautiful Soup", "Functools"],
+        tags: ["Python", "Beautiful Soup"],
         demoUrl: "",
         githubUrl: "https://github.com/a-gaede/cs121-assignment3",
     }
