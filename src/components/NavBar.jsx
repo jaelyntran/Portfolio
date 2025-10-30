@@ -45,8 +45,8 @@ export const NavBar = () => {
                 </div>
 
                 {/* mobile */}
-                <div className="md:hidden flex flex-col items-end p-2 z-50">
-                    <div className="">
+                <div className="md:hidden flex flex-col items-end p-2 z-50 transition-colors">
+                    <div>
                         <ThemeToggle />
                     </div>
                     <button onClick={() => setIsMenuOpen((prev) => !prev)}
