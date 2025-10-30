@@ -42,7 +42,6 @@ export const AboutSection = () => {
                                             Trained an AI scanner to read and convert bank statements, checks, payrolls,
                                             and other transactional records into Excel, allowing data entry automation.
                                         </p>
-                                        <p className="font-semibold text-sm text-primary">September 2024 - November 2024</p>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +56,6 @@ export const AboutSection = () => {
                                             Collaborated with NASA engineers and educators on hands-on workshops to explore
                                             future space missions, including designing rovers to navigate terrain and collect samples.
                                         </p>
-                                        <p className="font-semibold text-sm text-primary">January 2023 - August 2023</p>
                                     </div>
                                 </div>
                             </div>

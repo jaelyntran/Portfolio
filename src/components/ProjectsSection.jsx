@@ -1,58 +1,59 @@
 import { cn } from "@/lib/utils";
+import { Github, ExternalLink, ArrowRight } from "lucide-react";
 
 const projects = [
     {
         id: 1,
         title: "Simple Calculator",
-        description: "",
+        description: "A lightweight desktop calculator featuring accurate arithmetic and percentage operations.",
         image: "/projects/SimpleCalculator.png",
-        tags: "",
-        demoUrl: "#",
+        tags: ["Python", "Tkinter"],
+        demoUrl: "",
         githubUrl: "https://github.com/jaelyntran/Simple-Calculator",
     },
     {
         id: 2,
         title: "QuickRecap Discord Bot",
-        description: "",
+        description: "A Discord bot that summarizes recent chats and automates periodic summaries",
         image: "/projects/QuickRecapDiscordBot.png",
-        tags: "",
-        demoUrl: "#",
+        tags: ["JavaScript", "Node.js", "discord.js"],
+        demoUrl: "",
         githubUrl: "https://github.com/jaelyntran/QuickRecap-Discord-Bot",
     },
     {
         id: 3,
         title: "Sleep Tracker",
-        description: "",
+        description: "A cross-platform mobile app that helps users record and track their sleep patterns.",
         image: "/projects/SleepTracker.png",
-        tags: "",
-        demoUrl: "#",
+        tags: ["TypeScript", "Ionic", "Angular"],
+        demoUrl: "",
         githubUrl: "https://github.com/jaelyntran/Sleep-Tracker",
     },
     {
         id: 4,
         title: "Spotify Browser",
-        description: "",
+        description: "A Spotify browser that allows users to search, browse, and view Spotify by artists, albums, and tracks.",
         image: "/projects/SpotifyBrowser.jpg",
-        tags: "",
-        demoUrl: "#",
+        tags: ["TypeScript", "Angular", "Node.js"],
+        demoUrl: "",
         githubUrl: "https://github.com/jaelyntran/Spotify-Browser",
     },
     {
         id: 5,
         title: "Movie Database Web App",
-        description: "",
+        description: "A full-stack movie website with secure login, autocomplete search, and a session-based shopping cart system.",
         image: "/projects/MovieDatabaseWebApp.png",
-        tags: "",
+        tags: ["Java", "MySQL", "AWS EC2"],
         demoUrl: "https://www.youtube.com/watch?v=TTQ6ZGY0fJc",
-        githubUrl: "#",
+        githubUrl: "",
     },
     {
         id: 6,
         title: "Search Engine",
-        description: "",
+        description: "A search engine implementing an inverted index and TF-IDF ranking algorithm for efficient text retrieval.",
         image: "/projects/SearchEngine.jpg",
-        tags: "",
-        demoUrl: "#",
+        tags: ["Python", "Beautiful Soup", "Functools"],
+        demoUrl: "",
         githubUrl: "https://github.com/a-gaede/cs121-assignment3",
     }
 ]
@@ -66,16 +67,53 @@ export const ProjectsSection = () => {
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map((project, key) => (
-                    <div key={key}
+                {projects.map((project) => (
+                    <div key={project.id}
                          className={cn("group bg-card rounded-lg shadow-xs overflow-hidden card-hover")}>
                              <div className="h-48 overflow-hidden">
                                  <img src={project.image}
                                       alt={project.title}
                                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
                              </div>
+
+                             <div className="p-6">
+                                 <div className="flex flex-wrap gap-2 mb-4">
+                                     {project.tags.map((tag, i) => (
+                                         <span key={`${project.id}-${tag}-${i}`}
+                                               className="px-2 py-1 text-xs font-medium border rounded-full bg-primary/10 text-secondary-foreground">
+                                             {tag}
+                                         </span>))}
+                                 </div>
+
+                                 <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                                 <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+
+                                 <div className="flex justify-between items-center">
+                                     <div className="flex space-x-3">
+                                         {project.githubUrl
+                                            ? <a href={project.githubUrl}
+                                                 target="_blank"
+                                                 className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                                     <Github size={20}/>
+                                              </a>
+                                            : <a href={project.demoUrl}
+                                                 target="_blank"
+                                                 className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                                     <ExternalLink size={20}/>
+                                              </a>}
+                                     </div>
+                                 </div>
+                             </div>
                     </div>
                 ))}
+            </div>
+
+            <div className="text-center mt-12">
+                <a href="https://github.com/jaelyntran"
+                   target="_blank"
+                   className="cosmic-button w-fit flex items-center mx-auto gap-2">
+                    Check my Github <ArrowRight size={16} />
+                </a>
             </div>
         </div>
     </section>
