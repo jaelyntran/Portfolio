@@ -14,7 +14,8 @@ export const HomeSection = () => {
 
                             <p className={cn("text-lg md:text-xl text-muted-foreground max-2-2xl",
                                          "mx-auto opacity-0 animate-fade-in-delay-3")}>
-                                (Placeholder for short introduction)
+                                Where creativity meets technology, one project at a time.
+                                I create with purpose through code, design, and data to bring meaningful ideas to life.
                             </p>
 
                             <div className="pt-4 opacity-0 animate-fade-in-delay-4">

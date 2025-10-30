@@ -10,7 +10,9 @@ export const AboutSection = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
-                            <h3 className="text-2xl font-semibold">(Who am I)</h3>
+                            <h3 className="text-2xl font-semibold">
+                                Tech Enthusiast & Web Creator
+                            </h3>
                             <p className="text-muted-foreground">
                                 Born and raised in Ho Chi Minh City, Vietnam, I now call Los Angeles home.
                                 After earning my associate degree in Computer Science from Orange Coast College,
@@ -23,10 +25,10 @@ export const AboutSection = () => {
                                 problem solving that drives me to build responsive, engaging full stack products.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-                                <a href="#contact" className="cosmic-button">
-                                    {""}
-                                    Get In Touch
-                                </a>
+                                <a href="#contact" className="cosmic-button">Get In Touch</a>
+                                <a href="/projects/JaelynTranResume-103025.pdf"
+                                   target="_blank"
+                                   className="cosmic-button">Download Resume</a>
                             </div>
                         </div>
 
