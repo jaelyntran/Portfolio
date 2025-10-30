@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "private": true,
-  "homepage": "https://jaelyntran.github.io/jaelyntran.github.io",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -9,8 +8,6 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
