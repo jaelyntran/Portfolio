@@ -35,7 +35,7 @@ export const NavBar = () => {
                     <a className="text-xl font-bold text-primary flex items-center" href="#home">
                         <img src="/cat.png"
                              alt="Logo"
-                             className="w-8 h-8"/>
+                             className="w-12 h-12"/>
                         <span className="relative z-10">
                             <span className="text-glow text-foreground">Jaelyn Tran</span> Portfolio
                         </span>
