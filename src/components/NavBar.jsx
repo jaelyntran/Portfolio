@@ -33,6 +33,9 @@ export const NavBar = () => {
                                "z-50")}>
                 <div className="container flex items-center justify-between">
                     <a className="text-xl font-bold text-primary flex items-center" href="#home">
+                        <img src="/cat.png"
+                             alt="Logo"
+                             className="w-8 h-8"/>
                         <span className="relative z-10">
                             <span className="text-glow text-foreground">Jaelyn Tran</span> Portfolio
                         </span>
