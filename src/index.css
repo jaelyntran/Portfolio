@@ -91,6 +91,12 @@
         @apply bg-background text-foreground transition-colors duration-300;
         font-feature-settings: "rlig" 1, "calt" 1;
     }
+
+    input:-webkit-autofill,
+    textarea:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px hsl(var(--background)) inset !important;
+        -webkit-text-fill-color: hsl(var(--foreground)) !important;
+    }
 }
 
 @utility container {
