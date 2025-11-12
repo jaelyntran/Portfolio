@@ -4,12 +4,38 @@ import { useState, useEffect } from "react";
 import { Mail, Linkedin, Send } from "lucide-react";
 
 export const ContactSection = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+    const [statusMessage, setStatusMessage] = useState("");
+      const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setOpen(true);
-        setTimeout(() => setOpen(false), 4000);
+        setLoading(true);
+
+        const formData = new FormData(e.target);
+        const data = new URLSearchParams(formData);
+
+        try {
+            const response = await fetch(
+                "https://script.google.com/macros/s/AKfycby9Zhg5pUO7h7gSvvz7ISqa-iPpxABGubBz5UOaxpK1ABSUURPc8T9PHDzgpqhbBCy5/exec",
+                {
+                    method: "POST",
+                    body: data,
+                }
+            );
+
+            const result = await response.json();
+            setStatusMessage(result.message || "Message sent successfully!");
+            setOpen(true);
+            setTimeout(() => setOpen(false), 5000);
+            e.target.reset();
+        } catch (error) {
+            setStatusMessage("An unexpected error occurred.");
+            setOpen(true);
+            setTimeout(() => setOpen(false), 5000);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return  <Toast.Provider>
@@ -89,8 +115,9 @@ export const ContactSection = () => {
                                          </div>
 
                                          <button type="submit"
-                                                 className="cosmic-button w-full flex items-center justify-center gap-2">
-                                            Send Message <Send size={16} />
+                                                 className="cosmic-button w-full flex items-center justify-center gap-2"
+                                                 disabled={loading}>
+                                            {loading ? "Submitting..." : "Send Message"} <Send size={16} />
                                          </button>
                                      </form>
                              </div>
