@@ -1,9 +1,19 @@
 import { cn } from "@/lib/utils";
+import * as Toast from "@radix-ui/react-toast";
+import { useState, useEffect } from "react";
 import { Mail, Linkedin, Send } from "lucide-react";
 
 export const ContactSection = () => {
+    const [open, setOpen] = useState(false)
 
-    return <section id="contact" className="py-24 px-4 relative">
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setOpen(true);
+        setTimeout(() => setOpen(false), 4000);
+    };
+
+    return  <Toast.Provider>
+                <section id="contact" className="py-24 px-4 relative">
                     <div className="container mx-auto max-w-5xl">
                         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
                             Get In <span className="text-primary"> Touch</span>
@@ -40,7 +50,8 @@ export const ContactSection = () => {
 
                              <div className="bg-card p-8 rounded-lg shadow-xs">
                                  <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-                                     <form className="space-y-6">
+                                     <form className="space-y-6"
+                                           onSubmit={handleSubmit}>
                                          <div>
                                              <label htmlFor="name"
                                                     className="block text-sm font-medium mb-2">Your Name</label>
@@ -49,7 +60,7 @@ export const ContactSection = () => {
                                                     name="name"
                                                     required={true}
                                                     className={cn("w-full px-4 py-3 rounded-md border border-input bg-background",
-                                                                  "focus:outline-hidden")}
+                                                                  "focus:outline-hidden placeholder:opacity-40")}
                                                     placeholder="First and Last Name"/>
                                          </div>
 
@@ -61,7 +72,7 @@ export const ContactSection = () => {
                                                     name="email"
                                                     required={true}
                                                     className={cn("w-full px-4 py-3 rounded-md border border-input bg-background",
-                                                                  "focus:outline-hidden")}
+                                                                  "focus:outline-hidden placeholder:opacity-40")}
                                                     placeholder="example@gmail.com"/>
                                          </div>
 
@@ -73,18 +84,28 @@ export const ContactSection = () => {
                                                     name="message"
                                                     required={true}
                                                     className={cn("w-full px-4 py-3 rounded-md border border-input bg-background resize-none",
-                                                                  "focus:outline-hidden")}
+                                                                  "focus:outline-hidden placeholder:opacity-40")}
                                                     placeholder="Hello, I'd like to talk about..."/>
                                          </div>
 
                                          <button type="submit"
-                                                 className={cn("cosmic-button w-full flex items-center justify-center gap-2"
-                                                               )}>
-                                            Coming Soon
+                                                 className="cosmic-button w-full flex items-center justify-center gap-2">
+                                            Send Message <Send size={16} />
                                          </button>
                                      </form>
                              </div>
                         </div>
                     </div>
-           </section>
+                </section>
+
+                <Toast.Root className="fixed bottom-8 right-8 bg-card border border-border p-6 rounded-lg shadow-md animate-bounce"
+                            open={open}
+                            onOpenChange={setOpen}>
+                    <Toast.Title className="text-base font-semibold text-foreground gap-2">Message Sent!</Toast.Title>
+                    <Toast.Description className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        Thank you for your message. I'll get back to you soon.
+                    </Toast.Description>
+                </Toast.Root>
+                <Toast.Viewport className="fixed bottom-0 right-0 flex flex-col p-4 gap-4 w-[320px] max-w-[100vw] z-[100]"/>
+            </Toast.Provider>
 }
