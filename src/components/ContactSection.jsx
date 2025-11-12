@@ -125,7 +125,8 @@ export const ContactSection = () => {
                     </div>
                 </section>
 
-                <Toast.Root className="fixed bottom-8 right-8 bg-card border border-border p-6 rounded-lg shadow-md animate-bounce"
+                <Toast.Root className={cn("fixed bottom-8 left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-8",
+                                          "sm:translate-x-0 bg-card border border-border p-6 rounded-lg shadow-md animate-bounce")}
                             open={open}
                             onOpenChange={setOpen}>
                     <Toast.Title className="text-base font-semibold text-foreground gap-2">Message Sent!</Toast.Title>
