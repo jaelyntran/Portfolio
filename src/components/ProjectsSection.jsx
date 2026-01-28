@@ -4,6 +4,15 @@ import { Github, ExternalLink, ArrowRight } from "lucide-react";
 const projects = [
     {
         id: 1,
+        title: "CakeDay Discord Bot",
+        description: "A Discord bot that tracks and celebrates birthdays in your server.",
+        image: "/projects/CakeDayDiscordBot.png",
+        tags: ["JavaScript", "MongoDB", "discord.js"],
+        demoUrl: "",
+        githubUrl: "https://github.com/jaelyntran/CakeDay-DiscordBot/",
+    },
+    {
+        id: 2,
         title: "Simple Calculator",
         description: "A lightweight desktop calculator featuring accurate arithmetic and percentage operations.",
         image: "/projects/SimpleCalculator.png",
@@ -12,7 +21,7 @@ const projects = [
         githubUrl: "https://github.com/jaelyntran/Simple-Calculator",
     },
     {
-        id: 2,
+        id: 3,
         title: "QuickRecap Discord Bot",
         description: "A Discord bot that summarizes recent chats and automates periodic summaries",
         image: "/projects/QuickRecapDiscordBot.png",
@@ -21,7 +30,7 @@ const projects = [
         githubUrl: "https://github.com/jaelyntran/QuickRecap-Discord-Bot",
     },
     {
-        id: 3,
+        id: 4,
         title: "Sleep Tracker",
         description: "A cross-platform mobile app that helps users record and track their sleep patterns.",
         image: "/projects/SleepTracker.png",
@@ -30,7 +39,7 @@ const projects = [
         githubUrl: "https://github.com/jaelyntran/Sleep-Tracker",
     },
     {
-        id: 4,
+        id: 5,
         title: "Spotify Browser",
         description: "A Spotify browser that allows users to search, browse, and view Spotify by artists, albums, and tracks.",
         image: "/projects/SpotifyBrowser.jpg",
@@ -39,7 +48,7 @@ const projects = [
         githubUrl: "https://github.com/jaelyntran/Spotify-Browser",
     },
     {
-        id: 5,
+        id: 6,
         title: "Movie Database Web App",
         description: "A full-stack movie website with secure login, autocomplete search, and a session-based shopping cart system.",
         image: "/projects/MovieDatabaseWebApp.png",
@@ -48,10 +57,10 @@ const projects = [
         githubUrl: "",
     },
     {
-        id: 6,
+        id: 7,
         title: "Search Engine",
         description: "A search engine implementing an inverted index and TF-IDF ranking algorithm for efficient text retrieval.",
-        image: "/projects/SearchEngine.jpg",
+        image: "/projects/SearchEngine.png",
         tags: ["Python", "Beautiful Soup"],
         demoUrl: "",
         githubUrl: "https://github.com/a-gaede/cs121-assignment3",
