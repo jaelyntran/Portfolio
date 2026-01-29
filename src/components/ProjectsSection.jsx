@@ -42,7 +42,7 @@ const projects = [
         id: 5,
         title: "Spotify Browser",
         description: "A Spotify browser that allows users to search, browse, and view Spotify by artists, albums, and tracks.",
-        image: "/projects/SpotifyBrowser.jpg",
+        image: "/projects/SpotifyBrowser.png",
         tags: ["TypeScript", "Angular", "Node.js"],
         demoUrl: "",
         githubUrl: "https://github.com/jaelyntran/Spotify-Browser",
