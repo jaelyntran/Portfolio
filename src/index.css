@@ -63,8 +63,8 @@
 @layer base {
     :root {
         --background: 200 50% 99%;
-        --foreground: 283 40% 20%;
-        --primary: 325 40% 45%;
+        --foreground: 67 29.9% 51.8%;
+        --primary: 196 55% 75.8% / 0.94;
         --primary-foreground: 213 70% 93%;
         --border: 214 32% 91%;
         --card: 213 60% 94%;
