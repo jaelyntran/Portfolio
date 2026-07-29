@@ -71,7 +71,7 @@
     }
 
     .dark {
-        --background: 85 39.2% 14.5%;
+        --background: 81 54.7% 19.6% / 0.84;
         --foreground: 196 55% 75.8% / 0.94;
         --primary: 67 37.3% 43.2%;
         --primary-foreground: 44 88.7% 93.9%;
