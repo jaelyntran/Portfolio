@@ -72,9 +72,9 @@
 
     .dark {
         --background: 85 39.2% 15.2%;
-        --foreground: 151 39.2% 74.9%;
+        --foreground: 151 16.1% 38.2%;
         --primary: 67 37.3% 43.2%;
-        --primary-foreground: 44 88.7% 83.1%;
+        --primary-foreground: 44 88.7% 93.9%;
         --border: 57 25% 20%;
         --card: 155 11.5% 15%;
     }
