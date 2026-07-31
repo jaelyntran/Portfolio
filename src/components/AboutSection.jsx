@@ -11,18 +11,19 @@ export const AboutSection = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
                             <h3 className="text-2xl font-semibold">
-                                Tech Enthusiast & Web Creator
+                                Technology, Analytics & Digital Experiences
                             </h3>
                             <p className="text-muted-foreground">
                                 Born and raised in Ho Chi Minh City, Vietnam, I now call Los Angeles home.
-                                After earning my associate degree in Computer Science from Orange Coast College,
-                                I transferred to University of California, Irvine, where I completed my
-                                bachelor degree in the same field.
+                                I earned my Bachelor of Science in Computer Science from the University of California,
+                                Irvine, where I built a strong foundation in software development, databases,
+                                algorithms, and computer systems.
                             </p>
                             <p className="text-muted-foreground">
-                                My academic journey has been one of exploration and self-discovery. I’ve found
-                                my passion in web design and databases, an perfect blend of creativity and
-                                problem solving that drives me to build responsive, engaging full stack products.
+                                Throughout my academic and professional experiences, I've enjoyed exploring the
+                                intersection of technology, analytics, and digital experiences. Whether it's developing
+                                application, analyzing data, or supporting digital marketing initiatives, I enjoy
+                                solving problems and creating practical solutions that improve processes and user experiences.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                                 <a href="#contact" className="cosmic-button">Get In Touch</a>
@@ -33,6 +34,20 @@ export const AboutSection = () => {
                         </div>
 
                         <div className="grid grid-cols-1 gap-6">
+                            <div className="gradient-border p-6 card-hover">
+                                <div className="flex items-start gap-4">
+                                    <div className="p-3 rounded-full bg-primary/10">
+                                        <Briefcase className="h-6 w-6 text-primary" />
+                                    </div>
+                                    <div className="text-left">
+                                        <h4 className="font-semibold text-lg">ThreadBeast Social Media Coordinator</h4>
+                                        <p className="text-muted-foreground">
+                                            Managed community engagement, monitored customer feedback, and built
+                                            promotional landing pages in Webflow to support marketing campaigns.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                             <div className="gradient-border p-6 card-hover">
                                 <div className="flex items-start gap-4">
                                     <div className="p-3 rounded-full bg-primary/10">
